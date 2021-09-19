@@ -10,14 +10,23 @@
         body {
             margin: 0 auto;
             display: grid;
+            grid-template-columns: 1fr 1fr;
             background-color: antiquewhite;
-            background-image: url("class_with_mom.svg");
+            background: #BA9BC9;
             background-repeat: no-repeat;
         }
     </style>
 </head>
 
 <body>
+
+    <!-- This is how to draw a circle...-->
+    <svg viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="10" fill="green">
+  </svg>
+
+
+
     <?xml version="1.0" encoding="utf-8"?>
     <!-- Generator: Adobe Illustrator 25.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
     <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 432 432" style="enable-background:new 0 0 432 432;" xml:space="preserve">
@@ -650,10 +659,38 @@
         </g>
     </g>
     </svg>
+    <!-- Documentation
+        An SVG document fragment consists of any number of SVG elements contained within an ‘svg’ element.
+
+An SVG document fragment can range from an empty fragment (i.e., no content inside of the ‘svg’ element), to a very simple SVG document fragment containing a single SVG graphics element such as a ‘rect’, to a complex, deeply nested collection of container elements and graphics elements.
+
+An SVG document fragment can stand by itself as a self-contained file or resource, in which case the SVG document fragment is an SVG document, or it can be embedded inline as a fragment within a parent HTML or XML document.
+
+The following example shows simple SVG content embedded inline as a fragment within a parent XML document. Note the use of XML namespaces to indicate that the ‘svg’ and ‘ellipse’ elements belong to the SVG namespace:
+
+
+
+    -->
+
+    <?xml version="1.0" standalone="no"?>
+    <svg width="5cm" height="4cm" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <desc>Four separate rectangles
+  </desc>
+    <rect x="0.5cm" y="0.5cm" width="2cm" height="1cm"/>
+    <rect x="0.5cm" y="2cm" width="1.5cm" height="1.5cm"/>
+    <rect x="3cm" y="0.5cm" width="1.5cm" height="2cm"/>
+    <rect x="2.5cm" y="3cm" width="2cm" height="0.5cm"/>
+
+  <!-- Show outline of viewport using 'rect' element -->
+  <rect x=".01cm" y=".01cm" width="4.98cm" height="3.98cm"
+        fill="green" opacity="0.5" stroke="red" stroke-width=".02cm" />
+
+</svg>
+
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js" integrity="sha512-UxP+UhJaGRWuMG2YC6LPWYpFQnsSgnor0VUF3BHdD83PS/pOpN+FYbZmrYN+ISX8jnvgVUciqP/fILOXDjZSwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="gsap.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>
